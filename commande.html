@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander-- dar el halwa</title>
+</head>
+<body>
+    <header>
+        <h1>Dar el 7alwa</h1>
+        <figure>
+            <img src="pexels-bynamnamnam-43716305-29445730.jpg" alt="Vitrine de pâtisserie">
+            <figcaption>Notre vitrine de mignardises traditionnelles.</figcaption>
+        </figure>
+    <p>Pàtisserie fine tunisienne depuis 1900</p>
+    </header>
+    <nav id="sommaire">
+        <ul>
+            <li> <a href="#prop">à propos</a></li>
+            <li><a href="#prod">Nos produits</a></li>
+            <li><a href="#serv">Nos services</a></li>
+            <li><a href="#cont">Contact</a></li>
+            <li><a href="carte.html">carte</a></li>
+            <li><a href="#temoignages">temoignages</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Commander un gâteau personnalisé</h2>
+        <fieldset>
+            <legend>Vos cordonnées</legend>
+            <label for="">Nom</label>
+            <input type="text" id="prenom" name="prenom" required minlength="2">
+            <br><br>
+            <label for="prenom">prenom</label>
+            <input type="text" id="prenom" name="prenom" required minlength="2">
+            <br><br>
+            <label for="email">Adresse email:</label>
+            <input type="courriel" id="email" name="email" placeholder="vous@exemple.tn" required>
+            <br><br>
+            <label for="telephone">Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone"
+            placeholder="+21622550211"
+            pattern="\+216[0-9]{8}"
+            title="+216 suivi de 8 chiffres"
+            required>
+            <br><br>
+            <label for="code_postale">code_postale</label>
+            <input type="tel" id="telephone" name="telephone"
+            pattern="[0-9]{4}"
+            title="Entrez 4 chiffres"
+            required>
+            <br><br>
+            <label for="adresse">Gouvernorat:</label>
+            <textarea name="adresse" id="adresse" rows="3" cols="40"></textarea>
+            <br><br>
+            <label for="gouvernorat:">Gouvernorat :</label>
+            <select name="gouvernorat" id="gouvernorat">
+                <option value="sfax" selected>sfax</option>
+                <option value="tunis" selected>sfax</option>
+                <option value="sousse" selected>sfax</option>
+                <option value="gabes" selected>sfax</option>
+                <option value="autre" selected>sfax</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Votre gàteau</legend>
+            <fieldset>
+        <legend>Occasion</legend>
+
+        <input type="radio" id="anniversaire" name="occasion"
+               value="anniversaire" required>
+        <label for="anniversaire">Anniversaire</label>
+
+        <input type="radio" id="mariage" name="occasion"
+               value="mariage">
+        <label for="mariage">Mariage</label>
+
+        <input type="radio" id="fiancailles" name="occasion"
+               value="fiancailles">
+        <label for="fiancailles">Fiançailles</label>
+
+        <input type="radio" id="autre" name="occasion"
+               value="autre">
+        <label for="autre">Autre</label>
+    </fieldset>
+
+    <br><br>
+
+    
+    <label for="dateRetrait">Date de retrait :</label>
+    <input type="date"
+           id="dateRetrait"
+           name="dateRetrait"
+           min="2026-09-01"
+           required>
+
+    <br><br>
+
+    
+    <label for="parts">Nombre de parts :</label>
+    <input type="number"
+           id="parts"
+           name="parts"
+           min="6"
+           max="100"
+           step="2"
+           value="12">
+
+    <br><br>
+
+   
+    <fieldset>
+        <legend>Parfums souhaités</legend>
+
+        <input type="checkbox"
+               id="chocolat"
+               name="parfums[]"
+               value="chocolat"
+               checked>
+        <label for="chocolat">Chocolat</label>
+
+        <input type="checkbox"
+               id="vanille"
+               name="parfums[]"
+               value="vanille">
+        <label for="vanille">Vanille</label>
+
+        <input type="checkbox"
+               id="pistache"
+               name="parfums[]"
+               value="pistache">
+        <label for="pistache">Pistache</label>
+
+        <input type="checkbox"
+               id="fruitsRouges"
+               name="parfums[]"
+               value="fruitsRouges">
+        <label for="fruitsRouges">Fruits rouges</label>
+    </fieldset>
+
+    <br><br>
+
+    
+    <label for="sucre">Niveau de sucre :</label>
+    <input type="range"
+           id="sucre"
+           name="sucre"
+           min="0"
+           max="10"
+           step="1"
+           value="5">
+
+    <br><br>
+
+    
+    <label for="couleur">Couleur du glaçage :</label>
+    <input type="color"
+           id="couleur"
+           name="couleur"
+           value="#c8912a">
+
+    <br><br>
+
+    
+    <label for="message">Message sur le gâteau :</label>
+    <input type="text"
+           id="message"
+           name="message"
+           maxlength="30">
+
+    <br><br>
+
+
+    <label for="photo">Photo de modèle :</label>
+    <input type="file"
+           id="photo"
+           name="photo"
+           accept="image/*">
+    <label for="photo">Photo de modèle :</label>
+    <input type="file"
+           id="photo"
+           name="photo"
+           accept="image/*">
+
+    <br><br>
+
+    <label for="decoration">
+        Langages de décoration :
+    </label>
+
+    <select id="decoration"
+            name="decoration[]"
+            multiple
+            size="4">
+
+        <option value="fleurs">Fleurs en pâte à sucre</option>
+        <option value="fruits">Fruits frais</option>
+        <option value="chocolat">Décor chocolat</option>
+        <option value="macarons">Macarons</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="precisions">
+        Précisions :
+    </label>
+
+    <textarea id="precisions"
+              name="precisions"
+              rows="4"
+              cols="40"
+              maxlength="200"></textarea>       
+
+</fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Confiramtion</legend>
+            <fieldset>
+    <legend>Confirmation</legend>
+
+    <button type="submit">Envoyer ma commande</button>
+    <button type="reset">Tout effacer</button>
+
+</fieldset>
+        </fieldset>
+        <button type="submit">
+        Envoyer ma commande
+    </button>
+
+    <button type="submit" formnovalidate>
+        Envoyer sans validation
+    </button>
+
+    <button type="reset">
+        Tout effacer
+    </button>
+    </main>
+        <form>
+            <h2 id="cont">contact</h2>
+        <section id="contact">
+            <ol>
+                <li>Route de Tunis km 5, Sfax 3044,
+Tunisie</li>
+                    <li><a href="mailto:">contact@darelhalwa.tn</a></li>
+                    <li><a href="tel:">+216 74 000 000</a></li>
+            </ol>
+        </section>
+
+    </form>
+    <a href="https://www.facebook.com/darelhalwa" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/darelhalwa" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/company/darelhalwa" target="_blank">LinkedIn</a>
+            <a href="#sommaire">Retour au sommaire</a>
+        </section>
+    </footer>
+
+</body>
+</html>
